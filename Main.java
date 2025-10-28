@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Heatmap heatmap = new Heatmap(20, 20, "heatmap_gradient.csv");
+        Heatmap heatmap = new Heatmap(20, 20, "heatmap_20x20.csv");
 
         System.out.println("Heatmap 1: ");
         System.out.println("Total sum: " + heatmap.sumHeatmap()); // 14321.831999999997
