@@ -9,15 +9,15 @@ public class Heatmap {
 		data = new double[rows][cols];
 		System.out.println();
 		setData(filename);
-		System.out.println(data[0]);
 	}
 	private void setData(String filename) throws IOException {
 		File f = new File(filename);
+		System.out.print("R: " + data.length + ", C: " + data[0].length + "\n\n");
 		Scanner scan = new Scanner(f);
 		String line = scan.nextLine();
 		for(int i = 0; i < data.length; i++) {
 			line = scan.nextLine();
-			String[] splitline = line.split(", ");
+			String[] splitline = line.split(",");
 			for(int j = 0; j < data[0].length; j++) {
 				data[i][j] = Double.parseDouble(splitline[j+1]);
 			}
