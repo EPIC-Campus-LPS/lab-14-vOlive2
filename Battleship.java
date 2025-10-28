@@ -12,7 +12,7 @@ public class Battleship {
 		for(int i = 0; i < 10; i++) {
 			String line = scan.nextLine();
 			String[] splitline = line.split(",");
-			if(splitline.length != 10) //false;
+			if(splitline.length != 10) {}//false;
 			board[i] = splitline;
 		}
 		scan.close();
@@ -22,5 +22,7 @@ public class Battleship {
 			}
 			System.out.println();
 		}
+		
+		
 	}
 }
