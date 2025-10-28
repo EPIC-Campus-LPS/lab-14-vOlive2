@@ -12,14 +12,12 @@ public class Battleship {
 		for(int i = 0; i < 10; i++) {
 			String line = scan.nextLine();
 			String[] splitline = line.split(",");
-			if(splitline.length > 10) //false;
-			for(int j = 0; j < 10; j++) {
-				board[i][j] = splitline[j];
-			}
+			if(splitline.length != 10) //false;
+			board[i] = splitline;
 		}
 		scan.close();
-		for(int i = 0; i < board.length; i++) {
-			for(int j = 0; j < board[i].length; j++) {
+		for(int i = 0; i < 10; i++) {
+			for(int j = 0; j < 10; j++) {
 				System.out.print(board[i][j] + ", ");
 			}
 			System.out.println();
