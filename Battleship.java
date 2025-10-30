@@ -73,7 +73,7 @@ public class Battleship {
 					boolean right = board[i][j].equals(board[i][j+1]);
 					boolean down = board[i][j].equals(board[i-1][j]);
 					boolean up = board[i][j].equals(board[i+1][j]);
-					if(!(left||right||down||up)) valid = false;
+					if(!(left||right||down||up)) balanced = false;
 					if((board[i][j].equals("C"))) c--;
 					if((board[i][j].equals("B"))) b--;
 					if((board[i][j].equals("R"))) r--;
