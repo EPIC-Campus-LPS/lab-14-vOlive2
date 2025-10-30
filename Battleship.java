@@ -83,8 +83,7 @@ public class Battleship {
 				
 			}
 		}
-		if ((c+b+r+s+d) != 0) valid = false; 
-		return valid;
+		return balanced;
 	}
 
 }
