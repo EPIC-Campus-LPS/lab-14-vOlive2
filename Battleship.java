@@ -32,6 +32,12 @@ public class Battleship {
 		scan.close();
 		System.out.println("Valid: " + (valid&&validate(board)));
 		System.out.println("Balanced: " + (balanced(board)));
+		for(String[] i : board) {
+			for(String j : i) {
+				System.out.print(j + " ");
+			}
+			System.out.print("\n");
+		}
 	}
 	public static boolean validate(String board[][]) {
 		boolean valid = true;
