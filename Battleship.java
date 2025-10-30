@@ -31,6 +31,7 @@ public class Battleship {
 		}
 		scan.close();
 		System.out.print("Valid: " + (valid&&validate(board)));
+		System.out.print("Valid: " + (balanced(board)));
 	}
 	public static boolean validate(String board[][]) {
 		boolean valid = true;
@@ -55,8 +56,8 @@ public class Battleship {
 		return valid;
 	}
 	public static boolean balanced(String board[][]) {
-		boolean balanced = true;
-		for(int i = 1; i < 11; i++) {
+		boolean balance = true;
+		for(int i = 1; i < 11; i++) { //Rows
 			int c = 0, b = 0, r = 0, s = 0, d = 0;
 			for(int j = 1; j < 11; j++) {
 				if((board[i][j].equals("C"))) c=1;
@@ -64,10 +65,20 @@ public class Battleship {
 				if((board[i][j].equals("R"))) r=1;
 				if((board[i][j].equals("S"))) s=1;
 				if((board[i][j].equals("D"))) d=1;
-				}
 			}
+			if((c+b+r+s+d) > 2) balance = false;
 		}
-		return balanced;
+		for(int i = 1; i < 11; i++) { //Columns
+			int c = 0, b = 0, r = 0, s = 0, d = 0;
+			for(int j = 1; j < 11; j++) {
+				if((board[j][i].equals("C"))) c=1;
+				if((board[j][i].equals("B"))) b=1;
+				if((board[j][i].equals("R"))) r=1;
+				if((board[j][i].equals("S"))) s=1;
+				if((board[j][i].equals("D"))) d=1;
+			}
+			if((c+b+r+s+d) > 2) balance = false;
+		}
+		return balance;
 	}
-
 }
