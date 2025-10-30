@@ -30,12 +30,10 @@ public class Battleship {
 			board[i] = row;
 		}
 		scan.close();
-		for(int i = 0; i < 12; i++) {
-			for(int j = 0; j < 12; j++) {
-				System.out.print(board[i][j] + ", ");
-			}
-			System.out.println();
-		}
+		System.out.print("Valid: " + (valid&&validate(board)));
+	}
+	public static boolean validate(String board[][]) {
+		boolean valid = true;
 		int c = 5;
 		int b = 4;
 		int r = 3;
@@ -59,6 +57,6 @@ public class Battleship {
 			}
 		}
 		if ((c+b+r+s+d) != 0) valid = false; 
-		System.out.print(valid);
+		return valid;
 	}
 }
