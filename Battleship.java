@@ -55,22 +55,16 @@ public class Battleship {
 		return valid;
 	}
 	public static boolean balanced(String board[][]) {
-		
+		boolean balanced = true;
 		for(int i = 1; i < 11; i++) {
+			int c = 0, b = 0, r = 0, s = 0, d = 0;
 			for(int j = 1; j < 11; j++) {
-				if(!(board[i][j].equals("0"))) {
-					boolean left = board[i][j].equals(board[i][j-1]);
-					boolean right = board[i][j].equals(board[i][j+1]);
-					boolean down = board[i][j].equals(board[i-1][j]);
-					boolean up = board[i][j].equals(board[i+1][j]);
-					if(!(left||right||down||up)) balanced = false;
-					if((board[i][j].equals("C"))) c--;
-					if((board[i][j].equals("B"))) b--;
-					if((board[i][j].equals("R"))) r--;
-					if((board[i][j].equals("S"))) s--;
-					if((board[i][j].equals("D"))) d--;
+				if((board[i][j].equals("C"))) c=1;
+				if((board[i][j].equals("B"))) b=1;
+				if((board[i][j].equals("R"))) r=1;
+				if((board[i][j].equals("S"))) s=1;
+				if((board[i][j].equals("D"))) d=1;
 				}
-				
 			}
 		}
 		return balanced;
