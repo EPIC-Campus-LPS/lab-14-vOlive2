@@ -34,11 +34,7 @@ public class Battleship {
 	}
 	public static boolean validate(String board[][]) {
 		boolean valid = true;
-		int c = 5;
-		int b = 4;
-		int r = 3;
-		int s = 3;
-		int d = 2;
+		int c = 5, b = 4, r = 3, s = 3, d = 2;
 		for(int i = 1; i < 11; i++) {
 			for(int j = 1; j < 11; j++) {
 				if(!(board[i][j].equals("0"))) {
@@ -53,19 +49,13 @@ public class Battleship {
 					if((board[i][j].equals("S"))) s--;
 					if((board[i][j].equals("D"))) d--;
 				}
-				
 			}
 		}
 		if ((c+b+r+s+d) != 0) valid = false; 
 		return valid;
 	}
 	public static boolean balanced(String board[][]) {
-		boolean balanced = true;
-		int c = 5;
-		int b = 4;
-		int r = 3;
-		int s = 3;
-		int d = 2;
+		
 		for(int i = 1; i < 11; i++) {
 			for(int j = 1; j < 11; j++) {
 				if(!(board[i][j].equals("0"))) {
